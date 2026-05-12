@@ -49,7 +49,11 @@ class GraphClient:
     @with_retry(max_attempts=3)
     def _get(self, url: str, params: Optional[dict] = None) -> dict:
         resp = requests.get(url, headers=self._headers(), params=params, timeout=30)
-        resp.raise_for_status()
+        if not resp.ok:
+            raise requests.HTTPError(
+                f"{resp.status_code} Client Error: {resp.reason} for url: {resp.url} — {resp.text}",
+                response=resp,
+            )
         return resp.json()
 
     @with_retry(max_attempts=3)
