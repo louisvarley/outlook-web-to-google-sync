@@ -20,7 +20,7 @@ import msal  # type: ignore
 
 logger = logging.getLogger("calendar_sync")
 
-GRAPH_SCOPES = ["Calendars.ReadWrite", "offline_access"]
+GRAPH_SCOPES = ["Calendars.ReadWrite"]
 
 _AUTHORITY_PERSONAL = "https://login.microsoftonline.com/consumers"
 _AUTHORITY_COMMON = "https://login.microsoftonline.com/common"
