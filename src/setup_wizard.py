@@ -166,14 +166,14 @@ def _print_entra_guide() -> None:
             "[bold]4.[/bold] Supported account types:\n"
             "   • Personal account → [italic]Personal Microsoft accounts only[/italic]\n"
             "   • Work account     → [italic]Accounts in this organizational directory only[/italic]\n"
-            "[bold]5.[/bold] Redirect URI: [yellow]http://localhost[/yellow]  (Web platform)\n"
+            "[bold]5.[/bold] Redirect URI: leave blank — device code flow requires none\n"
             "[bold]6.[/bold] Click [cyan]Register[/cyan]\n"
-            "[bold]7.[/bold] [cyan]API permissions[/cyan] → [cyan]Add a permission[/cyan] → Microsoft Graph\n"
+            "[bold]7.[/bold] [cyan]Authentication[/cyan] → [cyan]Advanced settings[/cyan]\n"
+            "   → Enable [cyan]Allow public client flows[/cyan] → Save\n"
+            "[bold]8.[/bold] [cyan]API permissions[/cyan] → [cyan]Add a permission[/cyan] → Microsoft Graph\n"
             "   → Delegated → [cyan]Calendars.ReadWrite[/cyan] → Add\n"
-            "[bold]8.[/bold] If on a business tenant: [cyan]Grant admin consent[/cyan]\n"
-            "[bold]9.[/bold] Note your [yellow]Application (client) ID[/yellow] and [yellow]Directory (tenant) ID[/yellow]\n"
-            "[bold]10.[/bold] Work accounts: [cyan]Certificates & secrets[/cyan] → [cyan]New client secret[/cyan]\n"
-            "    Copy the value [bold red]immediately[/bold red] — it is shown only once",
+            "[bold]9.[/bold] If on a business tenant: [cyan]Grant admin consent[/cyan]\n"
+            "[bold]10.[/bold] Note your [yellow]Application (client) ID[/yellow] and [yellow]Directory (tenant) ID[/yellow]",
             title="[cyan]Setup Guide[/cyan]",
             border_style="dim",
             padding=(1, 2),
